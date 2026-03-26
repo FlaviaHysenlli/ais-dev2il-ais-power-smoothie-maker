@@ -6,12 +6,14 @@ from rich.progress import Progress, SpinnerColumn, TextColumn
 
 def get_ingredients(recipe_file: Path) -> list[str]:
     if not recipe_file.exists():
+        #raise FileNotFoundError(f"The file {recipe_file} does not exist.")
         return []
     with open(recipe_file, "r") as f:
         return [line.strip() for line in f.readlines() if line.strip()]
 
-def make_smoothie(recipe_file: Path) -> list[str]:
-    console = Console()
+def make_smoothie(recipe_file: Path, console: Console) -> list[str]:
+    # remove console = Console() line
+    # ... use the passed console ...
 
     ingredients = get_ingredients(recipe_file)
     if not ingredients:

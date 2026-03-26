@@ -8,3 +8,9 @@ dependencies = [
     "pyjokes>=0.8.3",
     "rich>=14.3.3",
 ]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "pytest-html>=4.2.0",
+]
