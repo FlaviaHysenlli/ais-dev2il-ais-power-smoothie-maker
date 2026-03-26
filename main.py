@@ -50,6 +50,9 @@ def main():
     base_dir = Path(__file__).parent
     smoothies_dir = base_dir / "smoothies"
 
+    #Initialize the console here
+    console = Console()
+
     # Just grab the first txt file we find
     recipe_files = list(smoothies_dir.glob("*.txt"))
 
@@ -58,7 +61,7 @@ def main():
         return
 
     # Let's make the smoothie
-    make_smoothie(recipe_files[0])
+    make_smoothie(recipe_files[0], console)
 
 if __name__ == "__main__":
     main()
